@@ -1,0 +1,245 @@
+/* ===== GLOBAL ===== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #66bb6a;
+  color: black;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: white;
+  color: #66bb6a;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background: #f0f0f0;
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-container {
+  width: 350px;
+  margin: 120px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.title {
+  color: #2c7be5;
+  margin-bottom: 15px;
+}
+
+/* ===== FORM ELEMENTS ===== */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2c7be5;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1a5bb8;
+}
+
+a {
+  color: #2c7be5;
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+}
+
+/* ===== LAYOUT ===== */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1e5f7b, #2f8db4);
+  color: white;
+  padding: 24px 16px;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar a {
+  display: block;
+  margin: 10px 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f9ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease, color 0.25s ease;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(2px);
+}
+
+.sidebar a.active,
+.sidebar a:focus {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  margin-left: 260px;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    display: block;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+
+/* ===== HEADINGS ===== */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== DASHBOARD GRID ===== */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c7be5;
+}
+
+/* ===== CARD COLORS ===== */
+.emission {
+  border-top: 6px solid #ff6b6b;
+}
+
+.budget {
+  border-top: 6px solid #3498db;
+}
+
+.points {
+  border-top: 6px solid #2ecc71;
+}
+
+.challenge {
+  border-top: 6px solid #f1c40f;
+}
+
+/* ===== TABLE ===== */
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* ===== CHART ===== */
+canvas {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* ===== SUGGESTION BOX ===== */
+.suggestion-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: #eafaf1;
+  border-left: 6px solid #2ecc71;
+  border-radius: 10px;
+}
+
+.suggestion-box h3 {
+  margin-bottom: 8px;
+}
+
+.suggestion-box p {
+  font-size: 16px;
+  color: #333;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/base}">
+
+<head>
+    <title>Carbon Budget</title>
+</head>
+
+<body>
+
+<div layout:fragment="content" class="main-content">
+
+    <h2>Carbon Budget</h2>
+
+    <form method="post" action="/budget/set" class="card" style="max-width:500px; margin-top:20px;">
+
+        <label>Month:</label>
+        <input type="number" name="month" placeholder="Month (1-12)" min="1" max="12" required>
+
+        <label>Monthly Limit (kg CO2):</label>
+        <input type="number" name="monthlyLimit" placeholder="Enter limit" required>
+
+        <button type="submit" style="margin-top:10px;">Save</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/base}">
+
+<head>
+    <title>Smart Travel Planner</title>
+</head>
+
+<body>
+
+<div layout:fragment="content" class="main-content">
+
+    <h2>Smart Travel Planner</h2>
+
+    <!-- FORM -->
+    <form method="post" action="/travel/calculate"
+          class="card" style="max-width:500px; margin-top:20px;">
+
+        <label>Mode of Transport:</label>
+        <select name="mode" required>
+            <option value="car">Car</option>
+            <option value="bus">Bus</option>
+            <option value="bike">Bike</option>
+            <option value="walk">Walk</option>
+        </select>
+
+        <label>Distance (km):</label>
+        <input type="number" name="distance" placeholder="Enter distance" required>
+
+        <button type="submit" style="margin-top:10px;">Calculate</button>
+
+    </form>
+
+    <!-- RESULT -->
+    <div th:if="${t != null}" class="card" style="max-width:500px; margin-top:20px;">
+
+        <h3>Result</h3>
+
+        <p>Mode: <span th:text="${t.mode}"></span></p>
+        <p>CO₂ Emission: <span th:text="${t.calculatedCO2}"></span> kg</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
